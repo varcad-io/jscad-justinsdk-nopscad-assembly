@@ -5,5 +5,5 @@ This repository demonstrates a mixed-library scene where JSCAD composes geometry
 Suggested linked libraries:
 
 - `JSCAD Modeling`
-- `JustinSDK`
+- `justinsdk`
 - `NopSCAD`

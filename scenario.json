@@ -1,6 +1,6 @@
 {
   "title": "JSCAD + JustinSDK + NopSCAD Assembly",
   "entryPath": "/index.js",
-  "linkedLibraries": ["JSCAD Modeling", "JustinSDK", "NopSCAD"],
+  "linkedLibraries": ["JSCAD Modeling", "justinsdk", "NopSCAD"],
   "features": ["jscad", "justinsdk", "nopscad", "mixed-libraries"]
 }
