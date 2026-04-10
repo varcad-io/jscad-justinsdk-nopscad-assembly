@@ -1,0 +1,172 @@
+[
+  {
+    "type": "Section",
+    "name": "base_geometry",
+    "label": "Base Geometry",
+    "description": "Tune the JustinSDK plate and crown before adding the assembly helpers"
+  },
+  {
+    "name": "hex_radius",
+    "type": "Slider",
+    "description": "Hexagon radius used by the plate",
+    "range": "1.6,6",
+    "defaultValue": "3.2"
+  },
+  {
+    "name": "hex_spacing",
+    "type": "Slider",
+    "description": "Spacing between hex cells in the plate",
+    "range": "0.2,1.8",
+    "defaultValue": "0.8"
+  },
+  {
+    "name": "hex_count",
+    "type": "Number",
+    "description": "Number of concentric hex rings in the base plate",
+    "defaultValue": "3"
+  },
+  {
+    "name": "plate_height",
+    "type": "Slider",
+    "description": "Extrusion height of the plate",
+    "range": "1,8",
+    "defaultValue": "2.8"
+  },
+  {
+    "name": "crown_outer_radius",
+    "type": "Slider",
+    "description": "Outer radius of the JustinSDK crown",
+    "range": "4,18",
+    "defaultValue": "10"
+  },
+  {
+    "name": "crown_inner_radius",
+    "type": "Slider",
+    "description": "Inner radius of the crown profile",
+    "range": "2,10",
+    "defaultValue": "5"
+  },
+  {
+    "name": "crown_points",
+    "type": "Number",
+    "description": "Point count used by the crown profile",
+    "defaultValue": "6"
+  },
+  {
+    "name": "crown_height",
+    "type": "Slider",
+    "description": "Height parameter for the starburst crown",
+    "range": "2,12",
+    "defaultValue": "6"
+  },
+  {
+    "type": "Section",
+    "name": "support_controls",
+    "label": "NopSCAD Support",
+    "description": "Optional rounded support imported from NopSCAD"
+  },
+  {
+    "name": "show_support",
+    "type": "Checkbox",
+    "description": "Include the rounded NopSCAD support",
+    "defaultValue": true
+  },
+  {
+    "name": "support_offset_xyz",
+    "type": "Vector3",
+    "description": "Position of the rounded support",
+    "defaultValue": [12, 0, 0],
+    "step": "0.5",
+    "visibleWhen": {
+      "field": "show_support",
+      "operator": "truthy"
+    }
+  },
+  {
+    "name": "support_roundover",
+    "type": "Slider",
+    "description": "Roundover amount for the support cylinder",
+    "range": "0.1,1.2",
+    "defaultValue": "0.55",
+    "visibleWhen": {
+      "field": "show_support",
+      "operator": "truthy"
+    }
+  },
+  {
+    "name": "support_radius",
+    "type": "Slider",
+    "description": "Radius parameter for the support cylinder",
+    "range": "0.4,2.5",
+    "defaultValue": "1.15",
+    "visibleWhen": {
+      "field": "show_support",
+      "operator": "truthy"
+    }
+  },
+  {
+    "name": "support_chamfer",
+    "type": "Slider",
+    "description": "Chamfer parameter for the support cylinder",
+    "range": "0.05,0.5",
+    "defaultValue": "0.18",
+    "visibleWhen": {
+      "field": "show_support",
+      "operator": "truthy"
+    }
+  },
+  {
+    "type": "Section",
+    "name": "marker_controls",
+    "label": "Marker Sphere",
+    "description": "Optional JSCAD marker used to highlight the mixed-library assembly"
+  },
+  {
+    "name": "show_marker",
+    "type": "Checkbox",
+    "description": "Include the marker sphere",
+    "defaultValue": true
+  },
+  {
+    "name": "marker_offset_xyz",
+    "type": "Vector3",
+    "description": "Position of the marker sphere",
+    "defaultValue": [6, -2.2, 0],
+    "step": "0.5",
+    "visibleWhen": {
+      "field": "show_marker",
+      "operator": "truthy"
+    }
+  },
+  {
+    "name": "marker_radius",
+    "type": "Slider",
+    "description": "Radius of the marker sphere",
+    "range": "0.25,2",
+    "defaultValue": "0.65",
+    "visibleWhen": {
+      "field": "show_marker",
+      "operator": "truthy"
+    }
+  },
+  {
+    "type": "Section",
+    "name": "presentation_controls",
+    "label": "Presentation",
+    "description": "Final transforms applied to the complete assembly"
+  },
+  {
+    "name": "display_scale",
+    "type": "Slider",
+    "description": "Scale the final assembly uniformly",
+    "range": "0.4,1.8",
+    "defaultValue": "1"
+  },
+  {
+    "name": "yaw_deg",
+    "type": "Slider",
+    "description": "Rotate the final assembly around the Z axis",
+    "range": "-180,180",
+    "defaultValue": "0"
+  }
+]
